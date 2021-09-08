@@ -1,0 +1,21 @@
+{
+  "name": "movies-explorer-api",
+  "version": "1.0.0",
+  "description": "Ya.Praktikum · Diploma API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "artginzburg/movies-explorer-api",
+  "keywords": [],
+  "author": {
+    "name": "Art Ginzburg",
+    "email": "artginzburg@ya.ru",
+    "url": "https://github.com/artginzburg"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/artginzburg/movies-explorer-api/issues"
+  },
+  "homepage": "https://github.com/artginzburg/movies-explorer-api#readme"
+}
