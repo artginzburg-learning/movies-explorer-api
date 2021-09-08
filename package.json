@@ -4,10 +4,10 @@
   "description": "Ya.Praktikum · Diploma API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app",
+    "dev": "nodemon"
   },
   "repository": "artginzburg/movies-explorer-api",
-  "keywords": [],
   "author": {
     "name": "Art Ginzburg",
     "email": "artginzburg@ya.ru",
@@ -17,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/artginzburg/movies-explorer-api/issues"
   },
-  "homepage": "https://github.com/artginzburg/movies-explorer-api#readme"
+  "homepage": "https://github.com/artginzburg/movies-explorer-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
 }
