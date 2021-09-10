@@ -5,12 +5,7 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
 
-const { createUser, login, logout } = require('./controllers/users');
-
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const { validateRegister, validateLogin } = require('./middlewares/validation');
-
-const { NotFoundError } = require('./errors/classes');
 
 const { StatusCodes } = require('./helpers/StatusCodes');
 const { messages } = require('./helpers/messages');
@@ -45,15 +40,7 @@ app.get('/crash-test', () => {
   }, 0);
 });
 
-app.post('/signup', validateRegister, createUser);
-app.post('/signin', validateLogin, login);
-app.delete('/signout', logout);
-
 app.use('/', require('./routes'));
-
-app.use('*', () => {
-  throw new NotFoundError(messages.notFound);
-});
 
 app.use(errorLogger);
 
