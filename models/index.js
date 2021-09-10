@@ -7,8 +7,6 @@ const Movie = require('./movie');
 
 mongoose.connect(MONGO, {
   useNewUrlParser: true,
-  useCreateIndex: true,
-  useFindAndModify: false,
   useUnifiedTopology: true,
 });
 
