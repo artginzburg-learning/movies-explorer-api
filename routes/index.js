@@ -9,6 +9,12 @@ const { NotFoundError } = require('../errors/classes');
 
 const { messages } = require('../helpers/messages');
 
+router.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт (или нет)');
+  }, 0);
+});
+
 router.post('/signup', validateRegister, createUser);
 router.post('/signin', validateLogin, login);
 router.delete('/signout', logout);

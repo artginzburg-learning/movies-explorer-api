@@ -34,12 +34,6 @@ app.use(
   express.json(),
 );
 
-app.get('/crash-test', () => {
-  setTimeout(() => {
-    throw new Error('Сервер сейчас упадёт (или нет)');
-  }, 0);
-});
-
 app.use('/', require('./routes'));
 
 app.use(errorLogger);
