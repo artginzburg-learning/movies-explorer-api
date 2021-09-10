@@ -16,6 +16,8 @@ const { PORT = 3000, HOST = 'localhost' } = process.env;
 
 const app = express();
 
+app.use(requestLogger);
+
 app.use(
   rateLimiter,
   helmet(),
@@ -31,8 +33,6 @@ app.use(
   cookieParser(),
   express.json(),
 );
-
-app.use(requestLogger);
 
 app.get('/crash-test', () => {
   setTimeout(() => {
