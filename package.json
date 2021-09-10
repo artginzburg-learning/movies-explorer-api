@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app",
     "postinstall": "node postinstall",
-    "dev": "nodemon",
+    "dev": "nodemon app",
     "lint": "npx eslint ."
   },
   "repository": "artginzburg/movies-explorer-api",
