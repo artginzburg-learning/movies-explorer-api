@@ -5,7 +5,7 @@ const Movie = require('./movie');
 
 const { HOST = 'localhost' } = process.env;
 
-mongoose.connect(`mongodb://${HOST}:27017/bitfilmsdb`, {
+mongoose.connect(`mongodb://${HOST}:27017/moviesdb`, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: false,
