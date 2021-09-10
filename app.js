@@ -10,7 +10,6 @@ const { createUser, login, logout } = require('./controllers/users');
 
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const { validateRegister, validateLogin } = require('./middlewares/validation');
-const auth = require('./middlewares/auth');
 
 const { NotFoundError } = require('./errors/classes');
 
@@ -52,8 +51,7 @@ app.post('/signup', validateRegister, createUser);
 app.post('/signin', validateLogin, login);
 app.delete('/signout', logout);
 
-app.use('/users', auth, require('./routes/users'));
-app.use('/movies', auth, require('./routes/movies'));
+app.use('/', require('./routes'));
 
 app.use('*', () => {
   throw new NotFoundError(messages.notFound);
