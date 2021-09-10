@@ -6,9 +6,8 @@ const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
 
 const { requestLogger, errorLogger } = require('./middlewares/logger');
+const rateLimiter = require('./middlewares/rateLimiter');
 const errorHandler = require('./middlewares/errorHandler');
-
-const rateLimiter = require('./rateLimiter');
 
 const { PORT = 3000, HOST = 'localhost' } = process.env;
 
