@@ -8,6 +8,10 @@
 - Проект MoviesExplorer: https://deeplomka.nomoredomains.club (разрабатывается)
 - API проекта MoviesExplorer: https://api.deeplomka.nomoredomains.club
 
+### Технологии
+
+* Авторизация по JWT-токену через cookies
+
 <br>
 <br>
 
