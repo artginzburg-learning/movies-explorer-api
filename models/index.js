@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
+const { MONGO } = require('../helpers/constants');
+
 const User = require('./user');
 const Movie = require('./movie');
 
-const { HOST = 'localhost' } = process.env;
-
-mongoose.connect(`mongodb://${HOST}:27017/moviesdb`, {
+mongoose.connect(MONGO, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: false,
