@@ -28,6 +28,7 @@ const validateRegister = celebrateJoiBody({
 const validateLogin = celebrateJoiBody({ ...credentials });
 
 const validateUserInfo = celebrateJoiBody({
+  email: StringRequired.email(),
   name: StringRequired,
 });
 
