@@ -6,9 +6,7 @@ const cookieParser = require('cookie-parser');
 const { errors } = require('celebrate');
 
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-
-const { StatusCodes } = require('./helpers/StatusCodes');
-const { messages } = require('./helpers/messages');
+const errorHandler = require('./middlewares/errorHandler');
 
 const rateLimiter = require('./rateLimiter');
 
@@ -40,15 +38,7 @@ app.use(errorLogger);
 
 app.use(
   errors(),
-  (err, req, res, next) => {
-    const {
-      statusCode = StatusCodes.internal,
-      message = messages.internal,
-    } = err;
-
-    res.status(statusCode).send({ message });
-    next();
-  },
+  errorHandler,
 );
 
 app.listen(PORT, () => console.log(`API listening on http://${HOST}:${PORT}`));
