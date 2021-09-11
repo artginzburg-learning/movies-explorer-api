@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app",
-    "postinstall": "node postinstall",
+    "init": "node postinstall",
     "dev": "nodemon app",
     "lint": "npx eslint ."
   },
