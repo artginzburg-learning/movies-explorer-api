@@ -1,6 +1,8 @@
 # movies-explorer-api
 Бэкенд-часть приложения дипломного проекта `MoviesExplorer` со следующими возможностями: авторизации и регистрации пользователей, операции с фильмами и пользователями.
 
+## Количество баллов: 100 <sup>[[#1]](https://github.com/artginzburg/movies-explorer-api/pull/1#issuecomment-917436204)</sup>
+
 ### Ссылки
 
 - [Чеклист 16](https://code.s3.yandex.net/web-developer/static/new-program/web-diploma-criteria-2.0/index.html)
