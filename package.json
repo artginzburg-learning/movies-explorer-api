@@ -4,12 +4,12 @@
   "description": "Ya.Praktikum · Diploma API",
   "main": "index.js",
   "scripts": {
-    "start": "node app",
+    "start": "node index",
     "init": "node postinstall",
-    "dev": "nodemon app",
+    "dev": "nodemon index",
     "lint": "npx eslint ."
   },
-  "repository": "artginzburg/movies-explorer-api",
+  "repository": "artginzburg-learning/movies-explorer-api",
   "author": {
     "name": "Art Ginzburg",
     "email": "artginzburg@ya.ru",

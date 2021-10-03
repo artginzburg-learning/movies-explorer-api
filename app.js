@@ -9,8 +9,6 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const rateLimiter = require('./middlewares/rateLimiter');
 const errorHandler = require('./middlewares/errorHandler');
 
-const { PORT = 3000, HOST = 'localhost' } = process.env;
-
 const app = express();
 
 app.use(requestLogger);
@@ -43,4 +41,4 @@ app.use(
   errorHandler,
 );
 
-app.listen(PORT, () => console.log(`API listening on http://${HOST}:${PORT}`));
+module.exports = { app };

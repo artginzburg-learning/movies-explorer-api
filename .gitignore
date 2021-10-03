@@ -1,3 +1,6 @@
+*.cert
+*.key
+
 .env
 /.vscode
 
