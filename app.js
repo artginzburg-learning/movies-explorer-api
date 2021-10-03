@@ -20,10 +20,7 @@ app.use(
   helmet(),
   cors({
     credentials: true,
-    origin: [
-      'https://deeplomka.nomoredomains.club',
-      'https://localhost:3000',
-    ],
+    origin: '*',
   }),
 );
 
