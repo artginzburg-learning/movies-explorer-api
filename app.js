@@ -20,7 +20,7 @@ app.use(
   helmet(),
   cors({
     credentials: true,
-    origin: '*',
+    origin: true,
   }),
 );
 
